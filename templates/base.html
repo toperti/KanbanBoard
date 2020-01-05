@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>Kanban Board</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename = 'css/main.css') }}">
+	</head>
+
+	<body>
+		<h1> Kanban Board </h1>
+		<div>
+			{% block table %}{% endblock %}
+		</div>
+	</body>
+</html>
