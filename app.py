@@ -99,9 +99,11 @@ def edit(category, id):
 		else:
 			db.session.delete(task)
 			db.session.commit()
-			
+
 			return redirect('/')
 
 	else:
 		return render_template('edit.html', task = task)
 
+if __name__ == '__main__':
+	app.run(debug=True)
