@@ -1,12 +1,41 @@
 {% extends 'base.html' %}
+{% block newtask %}
+
+{% endblock %}
+
 {% block table %}
 		<table class = "center">
 			<tr>
 				<td>To-Do</td>
+				{% for task in todo %}
+					<td><a href = '/edit/{{ task.id }}'>{{ task.task }}</a></td>
+				{% endfor %}
+			</tr>
+			<tr>
 				<td>In Progress</td>
+				{% for task in inpro %}
+					<td><a href = '/edit/{{ task.id }}'>{{ task.task }}</a></td>
+				{% endfor %}
+			</tr>
+			<tr>
 				<td>Completed</td>
+				{% for task in completed %}
+					<td><a href = '/edit/{{ task.id }}'>{{ task.task }}</a></td>
+				{% endfor %}
 			</tr>
 		</table>
+
+		<div class = "form">
+			<form action = '/' method = 'POST'>
+				<input type = "text" name = "content" id = "content">
+				<select name = "category" id = "category">
+					<option value = "Todo">Todo</option>
+					<option value = "Inpro">In Progress</option>
+					<option value = "Completed">Completed</option>
+				</select>
+				<input type = "submit" value = "Add task">
+			</form>
+		</div>
 {% endblock %}
 
 
