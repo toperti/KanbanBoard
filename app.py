@@ -99,6 +99,7 @@ def edit(category, id):
 		else:
 			db.session.delete(task)
 			db.session.commit()
+			
 			return redirect('/')
 
 	else:
