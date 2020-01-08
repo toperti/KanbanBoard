@@ -1,12 +1,14 @@
 
 body {
 	text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 table.center {
 	border-collapse: collapse;
 	margin-left: auto;
 	margin-right: auto;
+	font-family: 'Josefin Sans', sans-serif;
 }
 
 table th, td {
